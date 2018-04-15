@@ -3,11 +3,17 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
 import {
+    YellowBox
+} from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+import {
     DetailsScreen,
     LoginScreen,
     RegisterScreen,
     QRCodeScreen,
-    HomeScreen
+    HomeScreen,
+    GenerateQRCodeScreen
 } from './src/Container/index'
 
 const RootStack = StackNavigator(
@@ -26,6 +32,9 @@ const RootStack = StackNavigator(
         },
         QRCode: {
             screen: QRCodeScreen,
+        },
+        GenerateQRCode: {
+            screen: GenerateQRCodeScreen,
         }
     },
     {

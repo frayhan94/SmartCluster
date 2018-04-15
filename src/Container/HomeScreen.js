@@ -48,6 +48,16 @@ export default class HomeScreen extends React.Component {
                     underlayColor='#fff'>
                     <Text style={styles.buttonPrimaryText}>Scan QR Code</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.buttonPrimary}
+                    onPress={
+                        () => {
+                            this.props.navigation.navigate('GenerateQRCode')
+                        }
+                    }
+                    underlayColor='#fff'>
+                    <Text style={styles.buttonPrimaryText}>Hasilkan QR Code</Text>
+                </TouchableOpacity>
             </View>
         );
     }
