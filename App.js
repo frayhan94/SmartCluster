@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StackNavigator } from 'react-navigation';
+import {StackNavigator} from 'react-navigation';
 
 import Loader from 'react-native-mask-loader';
 
@@ -9,7 +9,7 @@ import {
     StyleSheet,
     View,
 }
-from 'react-native';
+    from 'react-native';
 
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
@@ -19,7 +19,9 @@ import {
     RegisterScreen,
     QRCodeScreen,
     HomeScreen,
-    GenerateQRCodeScreen
+    GenerateQRCodeScreen,
+    TermsAndConditionScreen,
+    AboutUsScreen
 } from './src/Container/index'
 
 const styles = StyleSheet.create({
@@ -58,6 +60,12 @@ const RootStack = StackNavigator(
         },
         GenerateQRCode: {
             screen: GenerateQRCodeScreen,
+        },
+        TermsAndCondition: {
+            screen: TermsAndConditionScreen,
+        },
+        AboutUs: {
+            screen: AboutUsScreen,
         }
     },
     {
@@ -70,14 +78,14 @@ const RootStack = StackNavigator(
             headerTitleStyle: {
                 fontWeight: 'bold',
             },
-            headerBackTitle:' '
+            headerBackTitle: ' '
         },
     }
 );
 
 export default class App extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             appReady: false,

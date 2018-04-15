@@ -34,6 +34,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         color: '#FFFEFC',
         fontWeight: 'bold'
+    },
+    textWrapper: {
+        color: '#FFFEFC',
+        marginTop:10
     }
 });
 export default styles;

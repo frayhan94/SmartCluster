@@ -4,6 +4,8 @@ import QRCodeScreen from './QRCodeScreen';
 import RegisterScreen from './RegisterScreen';
 import LoginScreen from './LoginScreen';
 import GenerateQRCodeScreen from './GenerateQRCodeScreen';
+import TermsAndConditionScreen from './TermsAndConditionScreen';
+import AboutUsScreen from './AboutUsScreen';
 
 export {
     LoginScreen,
@@ -11,5 +13,7 @@ export {
     QRCodeScreen,
     HomeScreen,
     DetailsScreen,
-    GenerateQRCodeScreen
+    GenerateQRCodeScreen,
+    TermsAndConditionScreen,
+    AboutUsScreen
 }
