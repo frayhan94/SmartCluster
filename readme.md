@@ -24,6 +24,8 @@ Setup edit configurations on WebStorm like following
 - Node Interpreter ( /usr/local/bin/node )
 - React Native Package ( /usr/local/lib/node_modules/react-native-cli )
 - Working Directory ( /Users/mmdc/Documents/mataharimall-development/www/kas-online )
+- There are some checkbox on the dialog just check the checkbox for Activate Tool Windows
+  on the bottom path
 - Once all set up just run the package by clicking the __green start button__
 - In another terminal tabs please type __react-native run-ios__
 
