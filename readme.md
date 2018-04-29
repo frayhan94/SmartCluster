@@ -29,7 +29,11 @@ Setup edit configurations on WebStorm like following
 - Once all set up just run the package by clicking the __green start button__
 - In another terminal tabs please type __react-native run-ios__
 
+## Another Tips ##
 
+- Please run react-native upgrade to regenerate the folder for IOS and Android inside the root project
+- You also needs sometimes to CD to your QRCodeScanner under your node_modules and run npm install
+   to install the dependency for react-native-camera
 
 ## Apps Color Scheme ##
 
@@ -44,4 +48,43 @@ Setup edit configurations on WebStorm like following
 - Powder RGB (238,239,234) (Stronger)
 - Daisy RGB (255,255,255)
 - Porcelain RGB(255,254,242) (Smoother)
+
+#### How to generate APK for android ####
+
+- keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+- place that generated key under android/app folder
+- edit the file for ~/.gradle/gradle.properties or android/gradle.properties
+
+  Add these following setting
+
+  MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+  MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+  MYAPP_RELEASE_STORE_PASSWORD=*****
+  MYAPP_RELEASE_KEY_PASSWORD=*****
+
+- edit the file under android/app/build.gradle and fill with these setting
+
+  android {
+    defaultConfig { }
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+
+- Last thing you have to do is release the APK by running these command
+  cd android && ./gradlew assembleRelease
+
 
