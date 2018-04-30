@@ -104,4 +104,8 @@ Setup edit configurations on WebStorm like following
 
   adb install -r ./app/build/outputs/apk/app-release-unsigned.apk
 
+#### How to create android virtual device ####
+
+echo no | Android/Sdk/tools/bin/avdmanager create avd --force --name testAVD --abi google_apis/x86_64 --package 'system-images;android-23;google_apis;x86_64'
+
 
