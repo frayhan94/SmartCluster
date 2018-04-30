@@ -92,4 +92,14 @@ Setup edit configurations on WebStorm like following
 - Finally you have to run below command to generate real apk
   react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 
+#### To test your apk inside your real android device ####
+
+- cd to /Users/mmdc/Library/Android/sdk/platform-tools
+- After that run this command
+  /adb install ~/Documents/mataharimall-development/www/my_camera/android/app/build/outputs/apk/app-debug.apk
+- If there is already APK inside your phone then place -r after install so the command
+  may seems like this
+
+  adb install -r ./app/build/outputs/apk/app-release-unsigned.apk
+
 
