@@ -83,9 +83,11 @@ Setup edit configurations on WebStorm like following
     }
 }
 
-
 - After that you have to do is release the APK by running these command
   cd android && ./gradlew assembleRelease
+
+- If needed you can run this command to make sure everything works
+  react-native run-android --variant=release
 
 - Make sure the folder assets exist inside android/app/main
 
