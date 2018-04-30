@@ -84,7 +84,12 @@ Setup edit configurations on WebStorm like following
 }
 
 
-- Last thing you have to do is release the APK by running these command
+- After that you have to do is release the APK by running these command
   cd android && ./gradlew assembleRelease
+
+- Make sure the folder assets exist inside android/app/main
+
+- Finally you have to run below command to generate real apk
+  react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 
 
