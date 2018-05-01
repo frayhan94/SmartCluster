@@ -97,6 +97,8 @@ Setup edit configurations on WebStorm like following
 #### To test your apk inside your real android device ####
 
 - cd to /Users/mmdc/Library/Android/sdk/platform-tools
+- Run this command if you get error 'cacheBridge'
+  ./adb reverse tcp:8081 tcp:8081
 - After that run this command
   /adb install ~/Documents/mataharimall-development/www/my_camera/android/app/build/outputs/apk/app-debug.apk
 - If there is already APK inside your phone then place -r after install so the command
