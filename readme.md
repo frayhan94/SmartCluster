@@ -89,7 +89,7 @@ Setup edit configurations on WebStorm like following
 - If needed you can run this command to make sure everything works
   react-native run-android --variant=release
 
-- Make sure the folder assets exist inside android/app/main
+- Make sure the folder assets exist inside android/app/src/main
 
 - Finally you have to run below command to generate real apk
   react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
