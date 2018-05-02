@@ -51,6 +51,8 @@ Setup edit configurations on WebStorm like following
 
 #### How to generate APK for android ####
 
+- Type this command to export the adb command
+  export PATH="/Users/myuser/Library/Android/sdk/platform-tools":$PATH
 - keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
 - place that generated key under android/app folder
 - edit the file for ~/.gradle/gradle.properties or android/gradle.properties
