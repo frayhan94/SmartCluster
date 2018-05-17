@@ -10,7 +10,16 @@
 
 https://www.npmjs.com/package/react-native-typography
 
+## Debugging Setup ##
 
+To view the value from code into your browser you can do following step
+
+IOS
+
+- Press Command + D on simulator
+- Press Remote JS Debugging
+- Open this link in the browser  http://localhost:8081/debugger-ui
+- From there you can see the value inside inspecting window of the browser
 
 ## Development Setup ##
 
