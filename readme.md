@@ -20,6 +20,8 @@ IOS
 - Press Remote JS Debugging
 - Open this link in the browser  http://localhost:8081/debugger-ui
 - From there you can see the value inside inspecting window of the browser
+- If you want to see the log for react-native ios then run this command react-native log-ios
+- If you want to sese the log for react-native android then run this command react-native log-android
 
 ## Development Setup ##
 
